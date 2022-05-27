@@ -6,7 +6,11 @@
 //
 
 #import <XCTest/XCTest.h>
-
+@import FakeGTMSessionFetcherCore;
+@import FakeGTMSessionFetcherFull;
+//#import "GTMSessionFetcherCore/GTMSessionFetcher.h";
+//#import "FakeGTMSessionFetcherCore/GTMSessionFetcher.h"
+#import <FakeGTMSessionFetcher/GTMSessionFetcherLogViewController.h>
 @interface ObjectiveCApp1Tests : XCTestCase
 
 @end
@@ -22,6 +26,8 @@
 }
 
 - (void)testExample {
+    GTMSessionFetcherLogViewController * a = [[GTMSessionFetcherLogViewController alloc] init];
+    [a sayHelloAgainAndAgain];
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
 }

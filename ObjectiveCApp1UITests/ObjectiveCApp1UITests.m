@@ -6,7 +6,6 @@
 //
 
 #import <XCTest/XCTest.h>
-
 @interface ObjectiveCApp1UITests : XCTestCase
 
 @end

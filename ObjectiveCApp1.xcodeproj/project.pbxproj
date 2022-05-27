@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9014602E283E178100C18D1B /* CasperSDKObjectiveC in Frameworks */ = {isa = PBXBuildFile; productRef = 9014602D283E178100C18D1B /* CasperSDKObjectiveC */; };
 		908F6F4F283CD8F30050531B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 908F6F4E283CD8F30050531B /* AppDelegate.m */; };
 		908F6F52283CD8F30050531B /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 908F6F51283CD8F30050531B /* SceneDelegate.m */; };
 		908F6F55283CD8F30050531B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 908F6F54283CD8F30050531B /* ViewController.m */; };
@@ -17,6 +18,10 @@
 		908F6F6A283CD8F50050531B /* ObjectiveCApp1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 908F6F69283CD8F50050531B /* ObjectiveCApp1Tests.m */; };
 		908F6F74283CD8F50050531B /* ObjectiveCApp1UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 908F6F73283CD8F50050531B /* ObjectiveCApp1UITests.m */; };
 		908F6F76283CD8F50050531B /* ObjectiveCApp1UITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 908F6F75283CD8F50050531B /* ObjectiveCApp1UITestsLaunchTests.m */; };
+		90EAADCF283D014D00FECDB6 /* FakeGTMSessionFetcher in Frameworks */ = {isa = PBXBuildFile; productRef = 90EAADCE283D014D00FECDB6 /* FakeGTMSessionFetcher */; };
+		90EAADD1283D014D00FECDB6 /* FakeGTMSessionFetcherCore in Frameworks */ = {isa = PBXBuildFile; productRef = 90EAADD0283D014D00FECDB6 /* FakeGTMSessionFetcherCore */; };
+		90EAADD3283D014D00FECDB6 /* FakeGTMSessionFetcherFull in Frameworks */ = {isa = PBXBuildFile; productRef = 90EAADD2283D014D00FECDB6 /* FakeGTMSessionFetcherFull */; };
+		90EAADD5283D014D00FECDB6 /* FakeGTMSessionFetcherLogView in Frameworks */ = {isa = PBXBuildFile; productRef = 90EAADD4283D014D00FECDB6 /* FakeGTMSessionFetcherLogView */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +66,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90EAADD1283D014D00FECDB6 /* FakeGTMSessionFetcherCore in Frameworks */,
+				90EAADD5283D014D00FECDB6 /* FakeGTMSessionFetcherLogView in Frameworks */,
+				9014602E283E178100C18D1B /* CasperSDKObjectiveC in Frameworks */,
+				90EAADD3283D014D00FECDB6 /* FakeGTMSessionFetcherFull in Frameworks */,
+				90EAADCF283D014D00FECDB6 /* FakeGTMSessionFetcher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +162,13 @@
 			dependencies = (
 			);
 			name = ObjectiveCApp1;
+			packageProductDependencies = (
+				90EAADCE283D014D00FECDB6 /* FakeGTMSessionFetcher */,
+				90EAADD0283D014D00FECDB6 /* FakeGTMSessionFetcherCore */,
+				90EAADD2283D014D00FECDB6 /* FakeGTMSessionFetcherFull */,
+				90EAADD4283D014D00FECDB6 /* FakeGTMSessionFetcherLogView */,
+				9014602D283E178100C18D1B /* CasperSDKObjectiveC */,
+			);
 			productName = ObjectiveCApp1;
 			productReference = 908F6F4A283CD8F30050531B /* ObjectiveCApp1.app */;
 			productType = "com.apple.product-type.application";
@@ -223,6 +240,10 @@
 				Base,
 			);
 			mainGroup = 908F6F41283CD8F30050531B;
+			packageReferences = (
+				90EAADCD283D014D00FECDB6 /* XCRemoteSwiftPackageReference "SampleLibraryInObjectiveC1" */,
+				9014602C283E178100C18D1B /* XCRemoteSwiftPackageReference "Casper-ObjectiveC-sdk" */,
+			);
 			productRefGroup = 908F6F4B283CD8F30050531B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -619,6 +640,53 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9014602C283E178100C18D1B /* XCRemoteSwiftPackageReference "Casper-ObjectiveC-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tqhuy2018/Casper-ObjectiveC-sdk.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		90EAADCD283D014D00FECDB6 /* XCRemoteSwiftPackageReference "SampleLibraryInObjectiveC1" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hienbui9999/SampleLibraryInObjectiveC1.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9014602D283E178100C18D1B /* CasperSDKObjectiveC */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9014602C283E178100C18D1B /* XCRemoteSwiftPackageReference "Casper-ObjectiveC-sdk" */;
+			productName = CasperSDKObjectiveC;
+		};
+		90EAADCE283D014D00FECDB6 /* FakeGTMSessionFetcher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 90EAADCD283D014D00FECDB6 /* XCRemoteSwiftPackageReference "SampleLibraryInObjectiveC1" */;
+			productName = FakeGTMSessionFetcher;
+		};
+		90EAADD0283D014D00FECDB6 /* FakeGTMSessionFetcherCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 90EAADCD283D014D00FECDB6 /* XCRemoteSwiftPackageReference "SampleLibraryInObjectiveC1" */;
+			productName = FakeGTMSessionFetcherCore;
+		};
+		90EAADD2283D014D00FECDB6 /* FakeGTMSessionFetcherFull */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 90EAADCD283D014D00FECDB6 /* XCRemoteSwiftPackageReference "SampleLibraryInObjectiveC1" */;
+			productName = FakeGTMSessionFetcherFull;
+		};
+		90EAADD4283D014D00FECDB6 /* FakeGTMSessionFetcherLogView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 90EAADCD283D014D00FECDB6 /* XCRemoteSwiftPackageReference "SampleLibraryInObjectiveC1" */;
+			productName = FakeGTMSessionFetcherLogView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 908F6F42283CD8F30050531B /* Project object */;
 }
