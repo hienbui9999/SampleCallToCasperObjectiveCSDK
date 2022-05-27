@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:">
+      location = "self:/Users/hien/ObjCLibrary/ObjectiveCApp1/CasperSDKSampleCall.xcodeproj">
    </FileRef>
 </Workspace>

@@ -42,7 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		908F6F4A283CD8F30050531B /* ObjectiveCApp1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjectiveCApp1.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		908F6F4A283CD8F30050531B /* CasperSDKSampleCall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CasperSDKSampleCall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		908F6F4D283CD8F30050531B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		908F6F4E283CD8F30050531B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		908F6F50283CD8F30050531B /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
@@ -54,9 +54,9 @@
 		908F6F5C283CD8F50050531B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		908F6F5E283CD8F50050531B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		908F6F5F283CD8F50050531B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		908F6F65283CD8F50050531B /* ObjectiveCApp1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObjectiveCApp1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		908F6F65283CD8F50050531B /* CasperSDKSampleCallTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CasperSDKSampleCallTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		908F6F69283CD8F50050531B /* ObjectiveCApp1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjectiveCApp1Tests.m; sourceTree = "<group>"; };
-		908F6F6F283CD8F50050531B /* ObjectiveCApp1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObjectiveCApp1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		908F6F6F283CD8F50050531B /* CasperSDKSampleCallUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CasperSDKSampleCallUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		908F6F73283CD8F50050531B /* ObjectiveCApp1UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjectiveCApp1UITests.m; sourceTree = "<group>"; };
 		908F6F75283CD8F50050531B /* ObjectiveCApp1UITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjectiveCApp1UITestsLaunchTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,9 +104,9 @@
 		908F6F4B283CD8F30050531B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				908F6F4A283CD8F30050531B /* ObjectiveCApp1.app */,
-				908F6F65283CD8F50050531B /* ObjectiveCApp1Tests.xctest */,
-				908F6F6F283CD8F50050531B /* ObjectiveCApp1UITests.xctest */,
+				908F6F4A283CD8F30050531B /* CasperSDKSampleCall.app */,
+				908F6F65283CD8F50050531B /* CasperSDKSampleCallTests.xctest */,
+				908F6F6F283CD8F50050531B /* CasperSDKSampleCallUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -149,9 +149,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		908F6F49283CD8F30050531B /* ObjectiveCApp1 */ = {
+		908F6F49283CD8F30050531B /* CasperSDKSampleCall */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 908F6F79283CD8F50050531B /* Build configuration list for PBXNativeTarget "ObjectiveCApp1" */;
+			buildConfigurationList = 908F6F79283CD8F50050531B /* Build configuration list for PBXNativeTarget "CasperSDKSampleCall" */;
 			buildPhases = (
 				908F6F46283CD8F30050531B /* Sources */,
 				908F6F47283CD8F30050531B /* Frameworks */,
@@ -161,7 +161,7 @@
 			);
 			dependencies = (
 			);
-			name = ObjectiveCApp1;
+			name = CasperSDKSampleCall;
 			packageProductDependencies = (
 				90EAADCE283D014D00FECDB6 /* FakeGTMSessionFetcher */,
 				90EAADD0283D014D00FECDB6 /* FakeGTMSessionFetcherCore */,
@@ -170,12 +170,12 @@
 				9014602D283E178100C18D1B /* CasperSDKObjectiveC */,
 			);
 			productName = ObjectiveCApp1;
-			productReference = 908F6F4A283CD8F30050531B /* ObjectiveCApp1.app */;
+			productReference = 908F6F4A283CD8F30050531B /* CasperSDKSampleCall.app */;
 			productType = "com.apple.product-type.application";
 		};
-		908F6F64283CD8F50050531B /* ObjectiveCApp1Tests */ = {
+		908F6F64283CD8F50050531B /* CasperSDKSampleCallTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 908F6F7C283CD8F50050531B /* Build configuration list for PBXNativeTarget "ObjectiveCApp1Tests" */;
+			buildConfigurationList = 908F6F7C283CD8F50050531B /* Build configuration list for PBXNativeTarget "CasperSDKSampleCallTests" */;
 			buildPhases = (
 				908F6F61283CD8F50050531B /* Sources */,
 				908F6F62283CD8F50050531B /* Frameworks */,
@@ -186,14 +186,14 @@
 			dependencies = (
 				908F6F67283CD8F50050531B /* PBXTargetDependency */,
 			);
-			name = ObjectiveCApp1Tests;
+			name = CasperSDKSampleCallTests;
 			productName = ObjectiveCApp1Tests;
-			productReference = 908F6F65283CD8F50050531B /* ObjectiveCApp1Tests.xctest */;
+			productReference = 908F6F65283CD8F50050531B /* CasperSDKSampleCallTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		908F6F6E283CD8F50050531B /* ObjectiveCApp1UITests */ = {
+		908F6F6E283CD8F50050531B /* CasperSDKSampleCallUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 908F6F7F283CD8F50050531B /* Build configuration list for PBXNativeTarget "ObjectiveCApp1UITests" */;
+			buildConfigurationList = 908F6F7F283CD8F50050531B /* Build configuration list for PBXNativeTarget "CasperSDKSampleCallUITests" */;
 			buildPhases = (
 				908F6F6B283CD8F50050531B /* Sources */,
 				908F6F6C283CD8F50050531B /* Frameworks */,
@@ -204,9 +204,9 @@
 			dependencies = (
 				908F6F71283CD8F50050531B /* PBXTargetDependency */,
 			);
-			name = ObjectiveCApp1UITests;
+			name = CasperSDKSampleCallUITests;
 			productName = ObjectiveCApp1UITests;
-			productReference = 908F6F6F283CD8F50050531B /* ObjectiveCApp1UITests.xctest */;
+			productReference = 908F6F6F283CD8F50050531B /* CasperSDKSampleCallUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -231,7 +231,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 908F6F45283CD8F30050531B /* Build configuration list for PBXProject "ObjectiveCApp1" */;
+			buildConfigurationList = 908F6F45283CD8F30050531B /* Build configuration list for PBXProject "CasperSDKSampleCall" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -248,9 +248,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				908F6F49283CD8F30050531B /* ObjectiveCApp1 */,
-				908F6F64283CD8F50050531B /* ObjectiveCApp1Tests */,
-				908F6F6E283CD8F50050531B /* ObjectiveCApp1UITests */,
+				908F6F49283CD8F30050531B /* CasperSDKSampleCall */,
+				908F6F64283CD8F50050531B /* CasperSDKSampleCallTests */,
+				908F6F6E283CD8F50050531B /* CasperSDKSampleCallUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -316,12 +316,12 @@
 /* Begin PBXTargetDependency section */
 		908F6F67283CD8F50050531B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 908F6F49283CD8F30050531B /* ObjectiveCApp1 */;
+			target = 908F6F49283CD8F30050531B /* CasperSDKSampleCall */;
 			targetProxy = 908F6F66283CD8F50050531B /* PBXContainerItemProxy */;
 		};
 		908F6F71283CD8F50050531B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 908F6F49283CD8F30050531B /* ObjectiveCApp1 */;
+			target = 908F6F49283CD8F30050531B /* CasperSDKSampleCall */;
 			targetProxy = 908F6F70283CD8F50050531B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -531,7 +531,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ObjectiveCApp1.app/ObjectiveCApp1";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CasperSDKSampleCall.app/CasperSDKSampleCall";
 			};
 			name = Debug;
 		};
@@ -554,7 +554,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ObjectiveCApp1.app/ObjectiveCApp1";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CasperSDKSampleCall.app/CasperSDKSampleCall";
 			};
 			name = Release;
 		};
@@ -603,7 +603,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		908F6F45283CD8F30050531B /* Build configuration list for PBXProject "ObjectiveCApp1" */ = {
+		908F6F45283CD8F30050531B /* Build configuration list for PBXProject "CasperSDKSampleCall" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				908F6F77283CD8F50050531B /* Debug */,
@@ -612,7 +612,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		908F6F79283CD8F50050531B /* Build configuration list for PBXNativeTarget "ObjectiveCApp1" */ = {
+		908F6F79283CD8F50050531B /* Build configuration list for PBXNativeTarget "CasperSDKSampleCall" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				908F6F7A283CD8F50050531B /* Debug */,
@@ -621,7 +621,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		908F6F7C283CD8F50050531B /* Build configuration list for PBXNativeTarget "ObjectiveCApp1Tests" */ = {
+		908F6F7C283CD8F50050531B /* Build configuration list for PBXNativeTarget "CasperSDKSampleCallTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				908F6F7D283CD8F50050531B /* Debug */,
@@ -630,7 +630,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		908F6F7F283CD8F50050531B /* Build configuration list for PBXNativeTarget "ObjectiveCApp1UITests" */ = {
+		908F6F7F283CD8F50050531B /* Build configuration list for PBXNativeTarget "CasperSDKSampleCallUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				908F6F80283CD8F50050531B /* Debug */,
