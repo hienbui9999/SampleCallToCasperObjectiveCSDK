@@ -1,17 +1,4 @@
-//
-//  ViewController.m
-//  ObjectiveCApp1
-//
-//  Created by Hien on 24/05/2022.
-//
-
 #import "ViewController.h"
-//#import <GTMSessionFetcher/GTMSessionFetcher.h>
-//@import FakeGTMSessionFetcherCore;
-//@import FakeGTMSessionFetcherFull;
-//#import "GTMSessionFetcherCore/GTMSessionFetcher.h";
-//#import "FakeGTMSessionFetcherCore/GTMSessionFetcher.h"
-#import <FakeGTMSessionFetcher/GTMSessionFetcherLogViewController.h>
 @import CasperSDKObjectiveC_GetStateRootHash;
 @import CasperSDKObjectiveC_CommonClasses;
 @import CasperSDKObjectiveC_GetPeerList;
