@@ -94,7 +94,7 @@ int maxCounter = 50;
 -(void) testPutDeploy {
     Deploy * deploy = [[Deploy alloc] init];
     Ed25519Crypto * ed25519 = [[Ed25519Crypto alloc] init];
-    bool isEd25519 = false;
+    bool isEd25519 = true;
     // Setup for Header
     DeployHeader * dh = [[DeployHeader alloc] init];
     NSString * accountEd25519 = @"01d12bf1e1789974fb288ca16fba7bd48e6ad7ec523991c3f26fbb7a3b446c2ea3";
@@ -207,19 +207,6 @@ int maxCounter = 50;
     oneCLValueSession4.bytes = @"01dde7472639058717a42e22d297d6cf3e07906bb57bc28efceac3677f8a3dc83b";
     oneNASession4.itsCLValue = oneCLValueSession4;
     
-    //setup 5th NameArg - key ByteArray
-    NamedArg * oneNASession5 = [[NamedArg alloc] init];
-    oneNASession5.itsName = @"testBytesArray";
-    CLValue * oneCLValueSession5 = [[CLValue alloc] init];
-    CLType * oneCLTypeSession5 = [[CLType alloc] init];
-    oneCLTypeSession5.itsType = CLTYPE_BYTEARRAY;
-    CLParsed * oneCLParseSession5 = [[CLParsed alloc] init];
-    oneCLParseSession5.itsValueStr = @"006d0be2fb64bcc8d170443fbadc885378fdd1c71975e2ddd349281dd9cc59cc";
-    oneCLParseSession5.itsCLType = oneCLTypeSession5;
-    oneCLValueSession5.cl_type = oneCLTypeSession5;
-    oneCLValueSession5.parsed = oneCLParseSession5;
-    oneCLValueSession5.bytes = @"006d0be2fb64bcc8d170443fbadc885378fdd1c71975e2ddd349281dd9cc59cc";
-    oneNASession5.itsCLValue = oneCLValueSession5;
     //Put all the NameArg to the RuntimeArgs
     RuntimeArgs * raSession = [[RuntimeArgs alloc] init];
     raSession.listArgs = [[NSMutableArray alloc] init];
@@ -227,7 +214,6 @@ int maxCounter = 50;
     [raSession.listArgs addObject:oneNASession2];
     [raSession.listArgs addObject:oneNASession3];
     [raSession.listArgs addObject:oneNASession4];
-   // [raSession.listArgs addObject:oneNASession5];
     ediSession.args = raSession;
     [session.itsValue addObject:ediSession];
     deploy.session = session;
@@ -239,12 +225,16 @@ int maxCounter = 50;
     deploy.itsHash = deployHash;
     NSString * signature =  @"";
     if(isEd25519) {
-        NSString * privateKeyStr = [ed25519 readPrivateKeyFromPemFile:@"ReadSwiftPrivateKeyEd25519.pem"];
+        NSString * fileName = @"ReadSwiftPrivateKeyEd25519.pem";
+        NSString * privateKeyPath = [[NSString alloc] initWithFormat:@"%@%@",CRYPTO_PATH_ED25519,fileName];
+        NSString * privateKeyStr = [ed25519 readPrivateKeyFromPemFile:privateKeyPath];
         signature = [ed25519 signMessageWithValue: deployHash withPrivateKey:privateKeyStr];
         signature = [[NSString alloc] initWithFormat:@"01%@",signature];
     } else { //Sign with Secp256k1
         Secp256k1Crypto * secp = [[Secp256k1Crypto alloc] init];
-        NSString * privateKeyPemStr = [secp secpReadPrivateKeyFromPemFile:@"ReadSwiftPrivateKeySecp256k1.pem"];
+        NSString * fileName = @"ReadSwiftPrivateKeySecp256k1.pem";
+        NSString * privateKeyPath = [[NSString alloc] initWithFormat:@"%@%@",CRYPTO_PATH_SECP256K1,fileName];
+        NSString * privateKeyPemStr = [secp secpReadPrivateKeyFromPemFile:privateKeyPath];
         PutDeployUtils.secpPrivateKeyPemStr = privateKeyPemStr;
         signature = [secp secpSignMessageWithValue:deployHash withPrivateKey:privateKeyPemStr];
         signature = [[NSString alloc] initWithFormat:@"02%@",signature];
@@ -260,18 +250,12 @@ int maxCounter = 50;
     deploy.approvals = listApprovals;
     PutDeployRPC * putDeployRPC = [[PutDeployRPC alloc] init];
     [putDeployRPC initializeWithRPCURL:URL_TEST_NET];
-    //PutDeployParams * putDeployParams = [[PutDeployParams alloc] init];
-    //putDeployParams.deploy = deploy;
-    //putDeployRPC.params = putDeployParams;
-    //NSString * putJson = [deploy toPutDeployParameterStr];
     NSString * callPutDeployID = @"putDeployCall1";
     [putDeployRPC putDeployForDeploy:deploy andCallID:callPutDeployID];
-    //[putDeployRPC putDeployWithJsonString:putJson andCallID:callPutDeployID];
     NSTimer * tPutDeploy = [NSTimer scheduledTimerWithTimeInterval: 1.0
                           target: self
                           selector:@selector(onTickPutDeploy:)
                                                  userInfo: @{@"param1":putDeployRPC,@"param2":callPutDeployID} repeats:YES];
-   
 }
 -(void)onTickPutDeploy:(NSTimer *)timer {
     PutDeployRPC * item = [[timer userInfo] objectForKey:@"param1"];
@@ -299,8 +283,8 @@ int maxCounter = 50;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self testPutDeploy];
     [self getStateRootHash];
     [self getPeer];
-    [self testPutDeploy];
 }
 @end

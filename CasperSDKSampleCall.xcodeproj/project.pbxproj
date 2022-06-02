@@ -18,6 +18,14 @@
 		908F6F6A283CD8F50050531B /* ObjectiveCApp1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 908F6F69283CD8F50050531B /* ObjectiveCApp1Tests.m */; };
 		908F6F74283CD8F50050531B /* ObjectiveCApp1UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 908F6F73283CD8F50050531B /* ObjectiveCApp1UITests.m */; };
 		908F6F76283CD8F50050531B /* ObjectiveCApp1UITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 908F6F75283CD8F50050531B /* ObjectiveCApp1UITestsLaunchTests.m */; };
+		909624E42848F98E0017E017 /* ReadSwiftPublicKeySecp256k1.pem in Resources */ = {isa = PBXBuildFile; fileRef = 909624DB2848F98E0017E017 /* ReadSwiftPublicKeySecp256k1.pem */; };
+		909624E52848F98E0017E017 /* writePublic1.pem in Resources */ = {isa = PBXBuildFile; fileRef = 909624DC2848F98E0017E017 /* writePublic1.pem */; };
+		909624E62848F98E0017E017 /* writePrivate1.pem in Resources */ = {isa = PBXBuildFile; fileRef = 909624DD2848F98E0017E017 /* writePrivate1.pem */; };
+		909624E72848F98E0017E017 /* ReadSwiftPrivateKeySecp256k1.pem in Resources */ = {isa = PBXBuildFile; fileRef = 909624DE2848F98E0017E017 /* ReadSwiftPrivateKeySecp256k1.pem */; };
+		909624E82848F98E0017E017 /* writePublic1.pem in Resources */ = {isa = PBXBuildFile; fileRef = 909624E02848F98E0017E017 /* writePublic1.pem */; };
+		909624E92848F98E0017E017 /* writePrivate1.pem in Resources */ = {isa = PBXBuildFile; fileRef = 909624E12848F98E0017E017 /* writePrivate1.pem */; };
+		909624EA2848F98E0017E017 /* ReadSwiftPrivateKeyEd25519.pem in Resources */ = {isa = PBXBuildFile; fileRef = 909624E22848F98E0017E017 /* ReadSwiftPrivateKeyEd25519.pem */; };
+		909624EB2848F98E0017E017 /* ReadSwiftPublicKeyEd25519.pem in Resources */ = {isa = PBXBuildFile; fileRef = 909624E32848F98E0017E017 /* ReadSwiftPublicKeyEd25519.pem */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +63,14 @@
 		908F6F6F283CD8F50050531B /* CasperSDKSampleCallUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CasperSDKSampleCallUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		908F6F73283CD8F50050531B /* ObjectiveCApp1UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjectiveCApp1UITests.m; sourceTree = "<group>"; };
 		908F6F75283CD8F50050531B /* ObjectiveCApp1UITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjectiveCApp1UITestsLaunchTests.m; sourceTree = "<group>"; };
+		909624DB2848F98E0017E017 /* ReadSwiftPublicKeySecp256k1.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadSwiftPublicKeySecp256k1.pem; sourceTree = "<group>"; };
+		909624DC2848F98E0017E017 /* writePublic1.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = writePublic1.pem; sourceTree = "<group>"; };
+		909624DD2848F98E0017E017 /* writePrivate1.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = writePrivate1.pem; sourceTree = "<group>"; };
+		909624DE2848F98E0017E017 /* ReadSwiftPrivateKeySecp256k1.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadSwiftPrivateKeySecp256k1.pem; sourceTree = "<group>"; };
+		909624E02848F98E0017E017 /* writePublic1.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = writePublic1.pem; sourceTree = "<group>"; };
+		909624E12848F98E0017E017 /* writePrivate1.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = writePrivate1.pem; sourceTree = "<group>"; };
+		909624E22848F98E0017E017 /* ReadSwiftPrivateKeyEd25519.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadSwiftPrivateKeyEd25519.pem; sourceTree = "<group>"; };
+		909624E32848F98E0017E017 /* ReadSwiftPublicKeyEd25519.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadSwiftPublicKeyEd25519.pem; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +122,7 @@
 		908F6F4C283CD8F30050531B /* ObjectiveCApp1 */ = {
 			isa = PBXGroup;
 			children = (
+				909624D92848F9550017E017 /* Crypto */,
 				908F6F4D283CD8F30050531B /* AppDelegate.h */,
 				908F6F4E283CD8F30050531B /* AppDelegate.m */,
 				908F6F50283CD8F30050531B /* SceneDelegate.h */,
@@ -136,6 +153,37 @@
 				908F6F75283CD8F50050531B /* ObjectiveCApp1UITestsLaunchTests.m */,
 			);
 			path = ObjectiveCApp1UITests;
+			sourceTree = "<group>";
+		};
+		909624D92848F9550017E017 /* Crypto */ = {
+			isa = PBXGroup;
+			children = (
+				909624DF2848F98E0017E017 /* Ed25519 */,
+				909624DA2848F98E0017E017 /* Secp256k1 */,
+			);
+			path = Crypto;
+			sourceTree = "<group>";
+		};
+		909624DA2848F98E0017E017 /* Secp256k1 */ = {
+			isa = PBXGroup;
+			children = (
+				909624DB2848F98E0017E017 /* ReadSwiftPublicKeySecp256k1.pem */,
+				909624DC2848F98E0017E017 /* writePublic1.pem */,
+				909624DD2848F98E0017E017 /* writePrivate1.pem */,
+				909624DE2848F98E0017E017 /* ReadSwiftPrivateKeySecp256k1.pem */,
+			);
+			path = Secp256k1;
+			sourceTree = "<group>";
+		};
+		909624DF2848F98E0017E017 /* Ed25519 */ = {
+			isa = PBXGroup;
+			children = (
+				909624E02848F98E0017E017 /* writePublic1.pem */,
+				909624E12848F98E0017E017 /* writePrivate1.pem */,
+				909624E22848F98E0017E017 /* ReadSwiftPrivateKeyEd25519.pem */,
+				909624E32848F98E0017E017 /* ReadSwiftPublicKeyEd25519.pem */,
+			);
+			path = Ed25519;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,9 +295,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				909624EA2848F98E0017E017 /* ReadSwiftPrivateKeyEd25519.pem in Resources */,
+				909624E52848F98E0017E017 /* writePublic1.pem in Resources */,
+				909624E42848F98E0017E017 /* ReadSwiftPublicKeySecp256k1.pem in Resources */,
+				909624E62848F98E0017E017 /* writePrivate1.pem in Resources */,
+				909624E82848F98E0017E017 /* writePublic1.pem in Resources */,
+				909624E72848F98E0017E017 /* ReadSwiftPrivateKeySecp256k1.pem in Resources */,
+				909624E92848F98E0017E017 /* writePrivate1.pem in Resources */,
 				908F6F5D283CD8F50050531B /* LaunchScreen.storyboard in Resources */,
 				908F6F5A283CD8F50050531B /* Assets.xcassets in Resources */,
 				908F6F58283CD8F30050531B /* Main.storyboard in Resources */,
+				909624EB2848F98E0017E017 /* ReadSwiftPublicKeyEd25519.pem in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
