@@ -6,11 +6,6 @@
 //
 
 #import <XCTest/XCTest.h>
-@import FakeGTMSessionFetcherCore;
-@import FakeGTMSessionFetcherFull;
-//#import "GTMSessionFetcherCore/GTMSessionFetcher.h";
-//#import "FakeGTMSessionFetcherCore/GTMSessionFetcher.h"
-#import <FakeGTMSessionFetcher/GTMSessionFetcherLogViewController.h>
 @interface ObjectiveCApp1Tests : XCTestCase
 
 @end

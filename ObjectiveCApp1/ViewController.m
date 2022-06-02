@@ -105,15 +105,11 @@ int maxCounter = 50;
         dh.account = accountSecp256k1;
     }
     dh.timestamp = [ed25519 generateTime];// @"2022-05-22T08:13:49.424Z";
-    NSLog(@"Time is:%@",dh.timestamp);
     dh.ttl = @"1h 30m";
     dh.gas_price = 1;
     dh.dependencies = [[NSMutableArray alloc] init];
-    //[dh.dependencies addObject:@"0101010101010101010101010101010101010101010101010101010101010101"];
     dh.chain_name = @"casper-test";
-    //dh.body_hash = @"798a65dae48dbefb398ba2f0916fa5591950768b7a467ca609a9a631caf13001";
     deploy.header = dh;
-    //deploy.itsHash = @"1cdb7d55641a70e19e5fa0293a4e13bb47a55c5838e8935143a054fd23ce1b12";
     // Setup for payment
     ExecutableDeployItem * payment = [[ExecutableDeployItem alloc] init];
     payment.itsType = EDI_MODULEBYTES;
@@ -141,7 +137,6 @@ int maxCounter = 50;
     [payment.itsValue addObject:edi_mb];
     deploy.payment = payment;
     // Deploy session initialization, base on this
-     // https://testnet.cspr.live/deploy/f49fbc552914fb3fcbbcf948a613c5413ef3f1afe2c29b9c8aea3ecc89207a8a
      // 1st namedArg
     ExecutableDeployItem * session = [[ExecutableDeployItem alloc] init];
     session.itsType = EDI_TRANSFER;
@@ -242,24 +237,17 @@ int maxCounter = 50;
     dh.body_hash = bodyHash;
     NSString * deployHash = [deploy getDeployHash];
     deploy.itsHash = deployHash;
-    NSLog(@"Deploy hash is:%@",deployHash);
     NSString * signature =  @"";
     if(isEd25519) {
         NSString * privateKeyStr = [ed25519 readPrivateKeyFromPemFile:@"ReadSwiftPrivateKeyEd25519.pem"];
-        NSLog(@"Privaet kiey is:%@",privateKeyStr);
         signature = [ed25519 signMessageWithValue: deployHash withPrivateKey:privateKeyStr];
-        NSLog(@"Signature is: %@",signature); //should add 01 prefix
         signature = [[NSString alloc] initWithFormat:@"01%@",signature];
-        NSLog(@"Signature is: %@",signature);
     } else { //Sign with Secp256k1
-        NSLog(@"Sign with Secp256k1");
         Secp256k1Crypto * secp = [[Secp256k1Crypto alloc] init];
         NSString * privateKeyPemStr = [secp secpReadPrivateKeyFromPemFile:@"ReadSwiftPrivateKeySecp256k1.pem"];
         PutDeployUtils.secpPrivateKeyPemStr = privateKeyPemStr;
-        NSLog(@"private key pem string to putDeployUtils:%@",PutDeployUtils.secpPrivateKeyPemStr);
         signature = [secp secpSignMessageWithValue:deployHash withPrivateKey:privateKeyPemStr];
         signature = [[NSString alloc] initWithFormat:@"02%@",signature];
-        NSLog(@"Signature is: %@",signature);
     }
     Approval * oneA = [[Approval alloc] init];
     if(isEd25519) {
@@ -288,18 +276,17 @@ int maxCounter = 50;
 -(void)onTickPutDeploy:(NSTimer *)timer {
     PutDeployRPC * item = [[timer userInfo] objectForKey:@"param1"];
     NSString * callID = [[timer userInfo] objectForKey:@"param2"];
-    NSLog(@"Counting timer for put deploy: %i and result:%@",counterPutDeploy,item.rpcCallGotResult[callID]);
-    if([item.rpcCallGotResult[callID] isEqualToString:RPC_VALUE_NOT_SET]) {
-    } else if([item.rpcCallGotResult[callID] isEqualToString:RPC_VALUE_ERROR_OBJECT]) {
+    if([PutDeployUtils.rpcCallGotResult[callID] isEqualToString:RPC_VALUE_NOT_SET]) {
+    } else if([PutDeployUtils.rpcCallGotResult[callID] isEqualToString:RPC_VALUE_ERROR_OBJECT]) {
         NSLog(@"Put Deploy with parse error");
         [timer invalidate];
         timer = nil;
-    } else if([item.rpcCallGotResult[callID] isEqualToString:RPC_VALUE_ERROR_NETWORK]) {
+    } else if([PutDeployUtils.rpcCallGotResult[callID] isEqualToString:RPC_VALUE_ERROR_NETWORK]) {
         NSLog(@"Put deploy with network error");
         [timer invalidate];
         timer = nil;
-    } else if([item.rpcCallGotResult[callID] isEqualToString:RPC_VALID_RESULT]){
-        PutDeployResult * putResult = item.valueDict[callID];
+    } else if([PutDeployUtils.rpcCallGotResult[callID] isEqualToString:RPC_VALID_RESULT]){
+        PutDeployResult * putResult = PutDeployUtils.valueDict[callID];
         NSLog(@"Put deploy result, deploy hash:%@",putResult.deployHash);
         [timer invalidate];
         timer = nil;

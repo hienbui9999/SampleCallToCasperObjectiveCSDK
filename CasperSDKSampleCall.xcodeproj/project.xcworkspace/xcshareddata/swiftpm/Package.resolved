@@ -15,8 +15,8 @@
         "repositoryURL": "https://github.com/leif-ibsen/BigInt",
         "state": {
           "branch": null,
-          "revision": "9e79977c6be2590f737c01dc891abd7283b9505c",
-          "version": "1.3.1"
+          "revision": "ddad1f5dae5be240f24e68080d36f95b475a45a7",
+          "version": "1.4.0"
         }
       },
       {
@@ -33,7 +33,7 @@
         "repositoryURL": "https://github.com/tqhuy2018/Casper-ObjectiveC-sdk.git",
         "state": {
           "branch": "main",
-          "revision": "4ee754ca8fd6da0551a3f70c7ddab88c9428ed70",
+          "revision": "10692ffd6cf32cd0fb974c29d4f9ac6fd6d4c4a1",
           "version": null
         }
       },
@@ -42,17 +42,8 @@
         "repositoryURL": "https://github.com/hienbui9999/CasperCryptoHandlePackage.git",
         "state": {
           "branch": null,
-          "revision": "d1ca843697875630159644c076c1c768f8af0c47",
-          "version": "1.0.1"
-        }
-      },
-      {
-        "package": "FakeGTMSessionFetcher",
-        "repositoryURL": "https://github.com/hienbui9999/SampleLibraryInObjectiveC1.git",
-        "state": {
-          "branch": "main",
-          "revision": "6e67dc5841ded1fc03590d540ca7cf38d669c53d",
-          "version": null
+          "revision": "3cc165c606b5f9c70e44c3baf0b2060c359486e8",
+          "version": "1.0.6"
         }
       },
       {
