@@ -120,7 +120,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "C081B9EA-71E9-4533-ABEE-5D48A1A25F10"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../Library/Developer/Xcode/DerivedData/CasperSDKSampleCall-bsavccehlssymfaupdwfctpjzfau/SourcePackages/checkouts/Casper-ObjectiveC-sdk/Sources/CasperSDKObjectiveC/PutDeploy/PutDeployRPC.m"
@@ -136,7 +136,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "E65B6450-7B60-4C9F-BD5C-4953D4088B33"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../Library/Developer/Xcode/DerivedData/CasperSDKSampleCall-bsavccehlssymfaupdwfctpjzfau/SourcePackages/checkouts/Casper-ObjectiveC-sdk/Sources/CasperSDKObjectiveC/PutDeploy/PutDeployRPC.m"
@@ -152,7 +152,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "37D1A982-DF1D-444B-80FF-CFE9264982D7"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../Library/Developer/Xcode/DerivedData/CasperSDKSampleCall-bsavccehlssymfaupdwfctpjzfau/SourcePackages/checkouts/Casper-ObjectiveC-sdk/Sources/CasperSDKObjectiveC/PutDeploy/PutDeployRPC.m"
