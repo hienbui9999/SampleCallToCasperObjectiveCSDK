@@ -82,4 +82,9 @@ NSString * privateKeyPath = @"/Users/YourName/Crypto/Secp256k1.pem";
 ```
 Make sure that you point to the correct pem file path and Xcode has the right to read the file. 
 
-After making these steps, you can Run the project and see the result in the Log panel of Xcode.
+After making these steps, you can Run the project and see the result in the Log panel of Xcode. Press Cmd + Shift + Y to view the Log panel.
+
+After Runing the Project (By hitting Product->Run) you will see the result in the log like this:
+
+<img width="1440" alt="Screen Shot 2022-06-02 at 21 12 05" src="https://user-images.githubusercontent.com/94465107/171652627-3481e6fe-075f-4044-9bce-cfdad2e5ad0a.png">
+
