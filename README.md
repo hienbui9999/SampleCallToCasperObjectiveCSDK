@@ -41,3 +41,44 @@ Copy 2 files: "ReadSwiftPrivateKeySecp256k1.pem" and "ReadSwiftPublicKeySecp256k
 <img width="1232" alt="Screen Shot 2022-06-01 at 10 24 23" src="https://user-images.githubusercontent.com/94465107/171321860-3bb780ee-334e-43d8-b533-3ad31ad22a42.png">
 
 <img width="1240" alt="Screen Shot 2022-06-01 at 10 25 09" src="https://user-images.githubusercontent.com/94465107/171321878-13482457-1dfe-47c1-9276-d898a0205a7e.png">
+
+The path for the key Ed25519 can change in this line of the file "ViewController.m" file
+
+ ```ObjectiveC
+NSString * fileName = @"ReadSwiftPrivateKeyEd25519.pem";
+NSString * privateKeyPath = [[NSString alloc] initWithFormat:@"%@%@",CRYPTO_PATH_ED25519,fileName];
+```
+
+ and for Secp256k1 the code is:
+ 
+  ```ObjectiveC
+ NSString * fileName = @"ReadSwiftPrivateKeySecp256k1.pem";
+ NSString * privateKeyPath = [[NSString alloc] initWithFormat:@"%@%@",CRYPTO_PATH_SECP256K1,fileName];
+ ```
+ 
+If you put the Pem file of Ed25519 in your Mac folder with full path such as "/Users/YourName/Crypto/Ed25519.pem" then just simple replace the code from:
+
+ ```ObjectiveC
+NSString * fileName = @"ReadSwiftPrivateKeyEd25519.pem";
+NSString * privateKeyPath = [[NSString alloc] initWithFormat:@"%@%@",CRYPTO_PATH_ED25519,fileName];
+```
+to 
+
+ ```ObjectiveC
+NSString * privateKeyPath = @"/Users/YourName/Crypto/Ed25519.pem";
+```
+
+Or if you put Pem file of Secp256k1 in your Mac folder with full path such as "/Users/YourName/Crypto/Secp256k1.pem" then just simple replace the code from:
+
+ ```ObjectiveC
+ NSString * fileName = @"ReadSwiftPrivateKeySecp256k1.pem";
+ NSString * privateKeyPath = [[NSString alloc] initWithFormat:@"%@%@",CRYPTO_PATH_SECP256K1,fileName];
+```
+to 
+
+ ```ObjectiveC
+NSString * privateKeyPath = @"/Users/YourName/Crypto/Secp256k1.pem";
+```
+Make sure that you point to the correct pem file path and Xcode has the right to read the file. 
+
+After making these steps, you can Run the project and see the result in the Log panel of Xcode.
