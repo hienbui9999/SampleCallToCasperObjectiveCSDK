@@ -325,7 +325,7 @@ int maxCounter = 50;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-  //  [self getStateRootHash];
+    [self getStateRootHash];
     [self getPeer];
     [self testPutDeploy];
 }
