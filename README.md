@@ -32,7 +32,7 @@ After this step finish, you will have 2 folder which are:
 
 "Users/CasperObjectiveCCryptoTest/Ed25519" and "Users/CasperObjectiveCCryptoTest/Secp256k1"
 
-Under the "Crypto" folder of this Project you will see 2 folders "Ed25519" and "Secp256k1". In folder "Ed25519" you will see 2 files: "ReadSwiftPrivateKeyEd25519.pem" and "ReadSwiftPublicKeyEd25519.pem", In folder "Secp256k1" you will see 2 files: "ReadSwiftPrivateKeySecp256k1.pem" and "ReadSwiftPublicKeySecp256k1.pem". They are the pre-build pem key files, used for task of reading Pem file to Private/Public key.
+There are 2 folder ins this Project with name "Ed25519" and "Secp256k1". In folder "Ed25519" you will see 2 files: "ReadSwiftPrivateKeyEd25519.pem" and "ReadSwiftPublicKeyEd25519.pem", In folder "Secp256k1" you will see 2 files: "ReadSwiftPrivateKeySecp256k1.pem" and "ReadSwiftPublicKeySecp256k1.pem". They are the pre-build pem key files, used for task of reading Pem file to Private/Public key.
 
 Copy 2 files: "ReadSwiftPrivateKeyEd25519.pem" and "ReadSwiftPublicKeyEd25519.pem" to folder "Users/CasperObjectiveCCryptoTest/Ed25519"
 
@@ -82,4 +82,9 @@ NSString * privateKeyPath = @"/Users/YourName/Crypto/Secp256k1.pem";
 ```
 Make sure that you point to the correct pem file path and Xcode has the right to read the file. 
 
-After making these steps, you can Run the project and see the result in the Log panel of Xcode.
+After making these steps, you can Run the project and see the result in the Log panel of Xcode. Press Cmd + Shift + Y to view the Log panel.
+
+After Runing the Project (By hitting Product->Run) you will see the result in the log like this:
+
+<img width="1440" alt="Screen Shot 2022-06-02 at 21 12 05" src="https://user-images.githubusercontent.com/94465107/171652627-3481e6fe-075f-4044-9bce-cfdad2e5ad0a.png">
+
