@@ -225,15 +225,13 @@ int maxCounter = 50;
     deploy.itsHash = deployHash;
     NSString * signature =  @"";
     if(isEd25519) {
-        NSString * fileName = @"ReadSwiftPrivateKeyEd25519.pem";
-        NSString * privateKeyPath = [[NSString alloc] initWithFormat:@"%@%@",CRYPTO_PATH_ED25519,fileName];
+        NSString * privateKeyPath = @"Users/a/PrivateKeyEd25519.pem";
         NSString * privateKeyStr = [ed25519 readPrivateKeyFromPemFile:privateKeyPath];
         signature = [ed25519 signMessageWithValue: deployHash withPrivateKey:privateKeyStr];
         signature = [[NSString alloc] initWithFormat:@"01%@",signature];
     } else { //Sign with Secp256k1
         Secp256k1Crypto * secp = [[Secp256k1Crypto alloc] init];
-        NSString * fileName = @"ReadSwiftPrivateKeySecp256k1.pem";
-        NSString * privateKeyPath = [[NSString alloc] initWithFormat:@"%@%@",CRYPTO_PATH_SECP256K1,fileName];
+        NSString * privateKeyPath = @"Users/a/PrivateKeySecp256k1.pem";
         NSString * privateKeyPemStr = [secp secpReadPrivateKeyFromPemFile:privateKeyPath];
         PutDeployUtils.secpPrivateKeyPemStr = privateKeyPemStr;
         signature = [secp secpSignMessageWithValue:deployHash withPrivateKey:privateKeyPemStr];
